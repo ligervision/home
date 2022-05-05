@@ -1,0 +1,74 @@
+.container {  display: grid;
+    grid-template-columns: 100px 1.5fr 1fr;
+    grid-template-rows: 40px 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navbar navbar navbar"
+      "margin main sidebar";
+  }
+  
+  .navbar {
+    grid-area: navbar; 
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0
+ }  
+
+  .main { grid-area: main; }
+  
+  .sidebar { grid-area: sidebar; }
+  
+  .margin { grid-area: margin; }
+  
+  .info {
+    grid-area: prof-info;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: flex-start;
+    padding: 0 5vw;
+ }  
+
+ 
+  
+  .navbar > a {
+
+    color: white;
+    text-decoration: none;
+    }
+  .posts {
+       grid-area: posts; 
+    }
+  
+  .prof-pic {
+       grid-area: prof-pic; 
+    }
+
+.prof-info > h1 {
+    align-self: center;
+}
+
+.post-card{
+    border: solid black 1px;
+    padding: 1vh;
+    margin: 1vh 0;
+}
+.card-title{
+    margin: 10px 0;
+}
+
+.card-links{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-links > a{
+    text-decoration: none;
+}
+.card-links > a:hover{
+    text-decoration: underline;
+}
